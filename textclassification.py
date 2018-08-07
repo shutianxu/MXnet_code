@@ -207,10 +207,13 @@ for epoch in range(1, num_epochs + 1):
     print('epoch %d, loss %.4f, train acc %.3f, test acc %.3f, time %.1f sec'
           % (epoch, train_l, train_acc, test_acc, time() - start))
 
+
 '''
-demo
+try demo 
 '''
 review = ['this', 'movie', 'is', 'great']
 nd.argmax(net(nd.reshape(
     nd.array([vocab.token_to_idx[token] for token in review], ctx=ctx),
     shape=(-1, 1))), axis=1).asscalar()
+
+
